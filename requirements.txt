@@ -1,5 +1,3 @@
-scipy
-Pillow
 matplotlib
-imageio
-tensorflow
+torch
+sklearn
