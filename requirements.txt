@@ -1,3 +1,7 @@
-matplotlib
 torch
-sklearn
+torchvision
+matplotlib
+pillow
+tqdm
+seaborn
+scikit-learn

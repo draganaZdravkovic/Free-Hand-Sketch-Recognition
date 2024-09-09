@@ -1,28 +1,38 @@
 # Free-Hand Sketch Recognition
 
-This project is about classifying free-hand sketches using a machine learning model. The goal is to accurately identify the object that a sketch represents.
+## Pregled
 
-## Dataset
+Ovaj projekat se bavi kreiranjem i podešavanjem konvolucionih neuronskih mreža (CNN) za klasifikaciju ručno nacrtanih skica u 20 različitih kategorija. Cilj je eksperimentisati sa prilagođenim arhitekturama CNN-a i unapred istreniranim modelima (npr. VGG16) koristeći tehnike transfer učenja i fine tuning.
 
-The dataset used in this project is a collection of 20,000 free-hand sketches, each labeled with the object it represents. Dataset can be found [here](https://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/).
+## Skup podataka
 
-## Model
+Dataset korišćen u projektu je kolekcija od 20,000 skica, svaka obeležena klasom objekta koji je označava (ukupno 250 klasa). Dataset se može naći [ovde](https://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/).
 
-The model used in this project is a Convolutional Neural Network (CNN), which is particularly effective for image classification tasks. The model is trained using the training dataset and its performance is evaluated using the validation dataset.
+Mi smo se odlučili za podskup ovog dataseta. Naš dataset sadrži 1600 slika podeljenih u 20 različitih klasa. Razlog ovoga je to što sa našim mašinama nemamo dovoljno resursa za treniranje modela klasifikacije slika u 250 klasa. Takođe, slike su same po sebi teške za učenje, što dodatno otežava treniranje.
 
-## Training
+!!ubaciti ovde prikaz slika
 
-TODO
+### Preprocesiranje Podataka:
+- **Transformacije**: 
+  - Promena veličine na 224x224 (originalna dimenzija 1111x1111)
+  - Slučajna rotacija i afine transformacije
+  - Brisanje delova slika
+  - Pretvaranje u tenzor i normalizacija
 
-## Results
+Dataset je podeljen na trening i validacioni skup (80% od ukupnog broja slika) i test skup(20% od ukupnog broja slika).
 
-TODO
+## Instalacija neophodnih zavisnosti
 
-## Future Work
+Da biste instalirali sve potrebne zavisnosti za projekat, koristite sledeću `pip` komandu:
+    **pip install -r requirements.txt**
 
-TODO
+## Literatura
 
-## Authors
+1. [Klasifikacija skica - TU Berlin](https://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/)
+2. Materijali sa vežbi
+
+
+## Autori
 
 * Mirko Kordic, mirko22kordic@gmail.com
 * Dragana Zdravkovic, dragana.zdravkovic602@gmail.com
